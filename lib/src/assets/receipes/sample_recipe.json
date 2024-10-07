@@ -1,0 +1,16 @@
+{
+    "title": "Spaghetti Bolognese",
+    "ingredients": ["Spaghetti", "Tomato Sauce", "Ground Beef"],
+    "steps": [
+      {
+        "description": "Boil the spaghetti.",
+        "imagePath": "images/step1.jpg"
+      },
+      {
+        "description": "Cook the ground beef.",
+        "imagePath": "images/step2.jpg"
+      }
+    ],
+    "imagePath": "images/spaghetti_bolognese.jpg"
+  }
+  
