@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CameraPreviewWidget extends StatelessWidget {
   final void Function(String) onGestureDetected;
 
-  const CameraPreviewWidget({required this.onGestureDetected});
+  const CameraPreviewWidget({super.key, required this.onGestureDetected});
 
   @override
   Widget build(BuildContext context) {

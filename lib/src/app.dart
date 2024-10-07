@@ -8,7 +8,7 @@ import 'views/home_view.dart';
 class MyApp extends StatelessWidget {
   final SettingsController settingsController;
 
-  const MyApp({Key? key, required this.settingsController}) : super(key: key);
+  const MyApp({super.key, required this.settingsController});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData.light(),
           darkTheme: ThemeData.dark(),
           themeMode: settingsController.themeMode,
-          home: HomeView(),
+          home: const HomeView(),
           routes: {
             SettingsView.routeName: (context) => SettingsView(controller: settingsController),
           },

@@ -8,7 +8,7 @@ import '../widgets/recipe_card.dart';
 class RecipeListView extends StatelessWidget {
   final List<Recipe> recipes;
 
-  const RecipeListView({required this.recipes});
+  const RecipeListView({super.key, required this.recipes});
 
   @override
   Widget build(BuildContext context) {

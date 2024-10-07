@@ -7,7 +7,7 @@ import '../models/recipe.dart';
 class StepWidget extends StatelessWidget {
   final RecipeStep step;
 
-  const StepWidget({required this.step});
+  const StepWidget({super.key, required this.step});
 
   @override
   Widget build(BuildContext context) {

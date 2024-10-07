@@ -21,7 +21,7 @@ class HomeView extends StatelessWidget {
           ),
         ],
       ),
-      body: RecipeListView(recipes: [],),
+      body: const RecipeListView(recipes: [],),
     );
   }
 }

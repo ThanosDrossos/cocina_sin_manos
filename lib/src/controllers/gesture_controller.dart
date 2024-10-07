@@ -47,10 +47,8 @@ class GestureController {
     Gesture detectedGesture = detectGesture(/* camera input */);
 
     // Call the appropriate callback when a gesture is detected
-    if (detectedGesture != null) {
-      onGestureDetected(detectedGesture);
+    onGestureDetected(detectedGesture);
     }
-  }
 
   Gesture detectGesture(/* camera input */) {
     // Placeholder for gesture detection logic
