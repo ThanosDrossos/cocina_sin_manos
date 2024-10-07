@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import '../../platform_channel.dart';
 import '../controllers/gesture_controller.dart';
 import '../models/recipe.dart';
 import '../widgets/camera_widget.dart';
@@ -39,13 +40,31 @@ class _RecipeDetailViewState extends State<RecipeDetailView> {
     );
   }
 
-  void _handleGesture(Gesture gesture) {
+    @override
+  void initState() {
+    super.initState();
+    GestureRecognitionChannel.init();
+    GestureRecognitionChannel.onGestureDetected.listen((gestureName) {
+      _handleGesture(gestureName);
+    });
+    // Start gesture recognition
+    GestureRecognitionChannel.startGestureRecognition();
+  }
+
+  void _handleGesture(String gestureName) {
     setState(() {
-      if (gesture == Gesture.next && currentStep < widget.recipe.steps.length - 1) {
+      if (gestureName == 'Open_Palm' && currentStep < widget.recipe.steps.length - 1) {
         currentStep++;
-      } else if (gesture == Gesture.previous && currentStep > 0) {
+      } else if (gestureName == 'Closed_Fist' && currentStep > 0) {
         currentStep--;
       }
     });
+  }
+
+  @override
+  void dispose() {
+    // Stop gesture recognition when the widget is disposed
+    GestureRecognitionChannel.stopGestureRecognition();
+    super.dispose();
   }
 }
