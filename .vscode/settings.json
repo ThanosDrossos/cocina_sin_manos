@@ -1,4 +1,5 @@
 {
     "cmake.sourceDirectory": "C:/Users/thano/AndroidStudioProjects/cocina_sin_manos/linux",
-    "java.configuration.runtimes": []
+    "java.configuration.runtimes": [],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

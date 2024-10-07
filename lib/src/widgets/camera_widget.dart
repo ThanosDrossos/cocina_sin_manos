@@ -1,7 +1,12 @@
 // widgets/camera_widget.dart
 
+import 'package:flutter/material.dart';
+
+import '../controllers/gesture_controller.dart';
+import 'camera_preview_widget.dart'; // Import the CameraPreviewWidget class
+
 class CameraWidget extends StatelessWidget {
-  final Function(Gesture) onGestureDetected;
+  final void Function(String) onGestureDetected;
 
   const CameraWidget({required this.onGestureDetected});
 

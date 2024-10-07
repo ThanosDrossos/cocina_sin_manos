@@ -1,5 +1,9 @@
 // widgets/step_widget.dart
 
+import 'package:flutter/material.dart';
+
+import '../models/recipe.dart';
+
 class StepWidget extends StatelessWidget {
   final RecipeStep step;
 

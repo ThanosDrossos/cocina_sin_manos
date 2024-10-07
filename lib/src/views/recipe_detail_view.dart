@@ -7,7 +7,9 @@ import '../../platform_channel.dart';
 import '../controllers/gesture_controller.dart';
 import '../models/recipe.dart';
 import '../widgets/camera_widget.dart';
-import '../widgets/setp_widget.dart';
+import '../widgets/step_widget.dart';
+
+import '../widgets/step_widget.dart';
 
 class RecipeDetailView extends StatefulWidget {
   final Recipe recipe;
