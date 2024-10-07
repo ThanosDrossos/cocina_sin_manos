@@ -1,7 +1,6 @@
-// widgets/step_widget.dart
+// src/widgets/step_widget.dart
 
 import 'package:flutter/material.dart';
-
 import '../models/recipe.dart';
 
 class StepWidget extends StatelessWidget {
@@ -11,11 +10,23 @@ class StepWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset(step.imagePath),
-        Text(step.description),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          if (step.imagePath.isNotEmpty)
+            Image.asset(
+              step.imagePath,
+              fit: BoxFit.cover,
+            ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              step.description,
+              style: const TextStyle(fontSize: 18),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
